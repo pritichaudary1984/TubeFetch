@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white transition-all duration-300">
+    
+    <!-- 🌟 Header Section -->
+    <header class="text-center py-6">
+        <h1 class="text-4xl font-bold">YouTube Downloader 🎥</h1>
+        <p class="text-gray-400 mt-2">Download Videos, Shorts & Audio Easily</p>
+        <button id="toggleDarkMode" class="mt-4 bg-gray-700 px-4 py-2 rounded-full hover:bg-gray-600 transition">
+            🌙 Toggle Dark Mode
+        </button>
+    </header>
+
+    <!-- 📥 Video/Shorts Downloader Section -->
+    <section class="container mx-auto p-6 max-w-lg">
+        <div class="glassmorphism p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Download Video/Shorts 🎥</h2>
+            <input type="text" id="videoUrl" class="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none" placeholder="Paste YouTube Video/Shorts URL here...">
+            <button id="fetchVideoDetails" class="w-full mt-3 bg-purple-600 py-2 rounded hover:bg-purple-500 transition">Fetch Video</button>
+            
+            <!-- 🎥 Video Preview -->
+            <div id="videoPreview" class="hidden mt-4 text-center">
+                <iframe id="videoFrame" class="w-full rounded-lg shadow-lg" height="250" frameborder="0" allowfullscreen></iframe>
+                <h3 id="videoTitle" class="text-lg font-semibold mt-3"></h3>
+                <p id="videoSize" class="text-gray-300"></p>
+                
+                <select id="videoQuality" class="w-full p-3 mt-3 rounded bg-gray-700 text-white"></select>
+                <button id="downloadVideo" class="w-full mt-4 bg-blue-600 py-2 rounded hover:bg-blue-500 transition">Download</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
